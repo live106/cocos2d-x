@@ -111,3 +111,7 @@ tools/jenkins_scripts/mac/android/userconf.ini
 
 # CTags
 tags
+
+# user ignore
+projects/
+
