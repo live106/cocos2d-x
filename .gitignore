@@ -112,5 +112,6 @@ tools/jenkins_scripts/mac/android/userconf.ini
 # CTags
 tags
 
-# go3k add
+# user ignore
 projects/
+
