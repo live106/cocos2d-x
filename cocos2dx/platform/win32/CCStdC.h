@@ -79,13 +79,13 @@ THE SOFTWARE.
     #include "./compat/stdint.h"
 #endif
 
-#define _WINSOCKAPI_
+//#define _WINSOCKAPI_
 // Structure timeval has define in winsock.h, include windows.h for it.
 #include <Windows.h>
 
 #ifndef __MINGW32__
 
-#include <WinSock2.h>
+//#include <WinSock2.h>
 
 NS_CC_BEGIN
 

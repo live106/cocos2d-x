@@ -300,9 +300,6 @@
     <ClCompile Include="..\spine\CCSkeletonAnimation.cpp">
       <Filter>spine</Filter>
     </ClCompile>
-    <ClCompile Include="..\network\Websocket.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
     <ClCompile Include="..\CocoStudio\Armature\animation\CCArmatureAnimation.cpp">
       <Filter>CocoStudio\Armature\animation</Filter>
     </ClCompile>
@@ -920,9 +917,6 @@
     </ClInclude>
     <ClInclude Include="..\spine\spine.h">
       <Filter>spine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\Websocket.h">
-      <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="..\spine\CCSkeleton.h">
       <Filter>spine</Filter>
