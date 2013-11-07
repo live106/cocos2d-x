@@ -178,7 +178,7 @@ public:
 
     inline const char* getLayerName(){ return m_sLayerName.c_str(); }
     inline void setLayerName(const char *layerName){ m_sLayerName = layerName; }
-private:
+protected:
     CCPoint positionForIsoAt(const CCPoint& pos);
     CCPoint positionForOrthoAt(const CCPoint& pos);
     CCPoint positionForHexAt(const CCPoint& pos);
@@ -192,7 +192,7 @@ private:
 
     /* The layer recognizes some special properties, like cc_vertez */
     void parseInternalProperties();
-    void setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid);
+    void setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid, int offsetX = 0, int offsetY = 0);
     CCSprite* reusedTileWithRect(CCRect rect);
     int vertexZForPos(const CCPoint& pos);
 
