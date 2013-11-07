@@ -104,6 +104,8 @@ CCTMXTilesetInfo::CCTMXTilesetInfo()
     ,m_uSpacing(0)
     ,m_uMargin(0)
     ,m_tImageSize(CCSizeZero)
+    , m_offsetX(0)
+    , m_offsetY(0)
 {
 }
 CCTMXTilesetInfo::~CCTMXTilesetInfo()
@@ -462,6 +464,12 @@ void CCTMXMapInfo::startElement(void *ctx, const char *name, const char **atts)
         // The parent element is now "objectgroup"
         pTMXMapInfo->setParentElement(TMXPropertyObjectGroup);
 
+    }
+    else if (elementName == "tileoffset")
+    {
+        CCTMXTilesetInfo* tileset = (CCTMXTilesetInfo*)pTMXMapInfo->getTilesets()->lastObject();
+        tileset->m_offsetX = (float)atof(valueForKey("x", attributeDict));
+        tileset->m_offsetY = (float)atof(valueForKey("y", attributeDict));
     }
     else if (elementName == "image")
     {
