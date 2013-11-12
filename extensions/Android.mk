@@ -74,6 +74,7 @@ spine/spine-cocos2dx.cpp \
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_curl_static
+LOCAL_WHOLE_STATIC_LIBRARIES += wxsqlite3_static
 
 LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
 LOCAL_EXPORT_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
@@ -94,3 +95,4 @@ include $(BUILD_STATIC_LIBRARY)
 $(call import-module,cocos2dx)
 $(call import-module,CocosDenshion/android)
 $(call import-module,cocos2dx/platform/third_party/android/prebuilt/libcurl)
+$(call import-module,external/wxsqlite3)

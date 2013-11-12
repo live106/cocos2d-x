@@ -235,9 +235,13 @@ void CCTMXLayer::parseInternalProperties()
     }
 }
 
-void CCTMXLayer::setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid)
+void CCTMXLayer::setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid, int offsetX, int offsetY)
 {
-    sprite->setPosition(positionAt(pos));
+    CCPoint sppos = positionAt(pos);
+    sppos.x -= offsetX;
+    sppos.y -= offsetY;
+    
+    sprite->setPosition(sppos);
     sprite->setVertexZ((float)vertexZForPos(pos));
     sprite->setAnchorPoint(CCPointZero);
     sprite->setOpacity(m_cOpacity);
@@ -253,9 +257,9 @@ void CCTMXLayer::setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid
     {
         // put the anchor in the middle for ease of rotation.
         sprite->setAnchorPoint(ccp(0.5f,0.5f));
-        sprite->setPosition(ccp(positionAt(pos).x + sprite->getContentSize().height/2,
-           positionAt(pos).y + sprite->getContentSize().width/2 ) );
-
+        sprite->setPosition(ccp(sppos.x + sprite->getContentSize().height/2,
+                                sppos.y + sprite->getContentSize().width/2 ) );
+        
         unsigned int flag = gid & (kCCTMXTileHorizontalFlag | kCCTMXTileVerticalFlag );
 
         // handle the 4 diagonally flipped states.
@@ -449,7 +453,7 @@ CCSprite * CCTMXLayer::appendTileForGID(unsigned int gid, const CCPoint& pos)
 
     CCSprite *tile = reusedTileWithRect(rect);
 
-    setupTileSprite(tile ,pos ,gid);
+    setupTileSprite(tile ,pos ,gid, m_pTileSet->m_offsetX, m_pTileSet->m_offsetY);
 
     // optimization:
     // The difference between appendTileForGID and insertTileforGID is that append is faster, since

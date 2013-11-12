@@ -126,6 +126,10 @@ public:
     std::string     m_sSourceImage;
     //! size in pixels of the image
     CCSize          m_tImageSize;
+    
+    int             m_offsetX;
+    int             m_offsetY;
+    
 public:
     CCTMXTilesetInfo();
     virtual ~CCTMXTilesetInfo();
