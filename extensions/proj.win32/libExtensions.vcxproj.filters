@@ -28,6 +28,9 @@
     <Filter Include="network">
       <UniqueIdentifier>{2a7741ff-87a5-41c8-8e51-d7a1cf0c8e4d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="wxsqlite">
+      <UniqueIdentifier>{8c3b427b-69f2-4548-8df1-3c950a7c6186}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\GUI\CCScrollView\CCScrollView.cpp">
@@ -230,6 +233,9 @@
     </ClCompile>
     <ClCompile Include="..\spine\CCSkeletonAnimation.cpp">
       <Filter>spine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\wxsqlite3\src\sqlite3secure.c">
+      <Filter>wxsqlite</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
