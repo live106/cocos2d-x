@@ -138,7 +138,7 @@ typedef struct _ccCArray {
 } ccCArray;
 
 /** Allocates and initializes a new C array with specified capacity */
-ccCArray* ccCArrayNew(unsigned int capacity);
+CC_DLL ccCArray* ccCArrayNew(unsigned int capacity);
 
 /** Frees C array after removing all remaining values. Silently ignores nil arr. */
 void ccCArrayFree(ccCArray *arr);
@@ -156,7 +156,7 @@ unsigned int ccCArrayGetIndexOfValue(ccCArray *arr, void* value);
 bool ccCArrayContainsValue(ccCArray *arr, void* value);
 
 /** Inserts a value at a certain position. Behavior undefined if array doesn't have enough capacity */
-void ccCArrayInsertValueAtIndex( ccCArray *arr, void* value, unsigned int index);
+CC_DLL void ccCArrayInsertValueAtIndex( ccCArray *arr, void* value, unsigned int index);
 
 /** Appends an value. Behavior undefined if array doesn't have enough capacity. */
 void ccCArrayAppendValue(ccCArray *arr, void* value);
