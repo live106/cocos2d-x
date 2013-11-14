@@ -89,6 +89,13 @@ public:
 
     inline CCArray* getDescendants(void) { return m_pobDescendants; }
 
+    /**
+     * Creates an empty sprite batch node without a texture.
+     *
+     * @return An empty sprite batch node object that is marked as autoreleased.
+     */
+    static CCSpriteBatchNode* create();
+    
     /** creates a CCSpriteBatchNode with a texture2d and capacity of children.
     The capacity will be increased in 33% in runtime if it run out of space.
     */

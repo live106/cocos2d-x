@@ -42,6 +42,18 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
+CCSpriteBatchNode* CCSpriteBatchNode::create()
+{
+    CCSpriteBatchNode *pSpriteBatchNode = new CCSpriteBatchNode();
+    if (pSpriteBatchNode && pSpriteBatchNode->init())
+    {
+        pSpriteBatchNode->autorelease();
+        return pSpriteBatchNode;
+    }
+    CC_SAFE_DELETE(pSpriteBatchNode);
+    return NULL;
+}
+
 /*
 * creation with CCTexture2D
 */

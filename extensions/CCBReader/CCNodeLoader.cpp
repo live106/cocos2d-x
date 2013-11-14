@@ -248,6 +248,15 @@ void CCNodeLoader::parseProperties(CCNode * pNode, CCNode * pParent, CCBReader *
                 }
                 break;
             }
+            case kCCBPropTypeTextureAtlas:
+            {
+                CCTextureAtlas * ccTextureAtlas = this->parsePropTypeTextureAtlas(pNode, pParent, pCCBReader);
+                if(setProp)
+                {
+                    this->onHandlePropTypeTextureAtlas(pNode, pParent, propertyName.c_str(), ccTextureAtlas, pCCBReader);
+                }
+                break;
+            }
             case kCCBPropTypeByte: 
             {
                 unsigned char byte = this->parsePropTypeByte(pNode, pParent, pCCBReader, propertyName.c_str());
@@ -942,6 +951,19 @@ CCNode * CCNodeLoader::parsePropTypeCCBFile(CCNode * pNode, CCNode * pParent, CC
     return ccbFileNode;
 }
 
+CCTextureAtlas * CCNodeLoader::parsePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader) {
+    std::string atlasFile = pCCBReader->getCCBRootPath() + pCCBReader->readCachedString();
+    
+    if (atlasFile.length() > 0)
+    {
+        CCTexture2D *texture2D = CCTextureCache::sharedTextureCache()->addImage(atlasFile.c_str());
+        return CCTextureAtlas::createWithTexture(texture2D, 29);
+    }
+    else
+    {
+        return NULL;
+    }
+}
 
 
 void CCNodeLoader::onHandlePropTypePosition(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCPoint pPosition, CCBReader * pCCBReader) {
@@ -1104,6 +1126,10 @@ void CCNodeLoader::onHandlePropTypeBlockCCControl(CCNode * pNode, CCNode * pPare
 }
 
 void CCNodeLoader::onHandlePropTypeCCBFile(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCNode * pCCBFileNode, CCBReader * pCCBReader) {
+    ASSERT_FAIL_UNEXPECTED_PROPERTY(pPropertyName);
+}
+
+void CCNodeLoader::onHandlePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, const char * pPropertyName, CCTextureAtlas * pCCTextureAtlas, CCBReader * pCCBReader) {
     ASSERT_FAIL_UNEXPECTED_PROPERTY(pPropertyName);
 }
 

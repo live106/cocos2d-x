@@ -87,6 +87,7 @@ class CCNodeLoader : public CCObject {
         virtual BlockCCControlData * parsePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
         virtual CCNode * parsePropTypeCCBFile(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
         virtual float * parsePropTypeFloatXY(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
+        virtual CCTextureAtlas * parsePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
 
 
         virtual void onHandlePropTypePosition(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCPoint pPosition, CCBReader * pCCBReader);
@@ -118,6 +119,7 @@ class CCNodeLoader : public CCObject {
         virtual void onHandlePropTypeBlock(CCNode * pNode, CCNode * pParent, const char* pPropertyName, BlockData * pBlockData, CCBReader * pCCBReader);
         virtual void onHandlePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, const char* pPropertyName, BlockCCControlData * pBlockCCControlData, CCBReader * pCCBReader);
         virtual void onHandlePropTypeCCBFile(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCNode * pCCBFileNode, CCBReader * pCCBReader);
+        virtual void onHandlePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, const char * pPropertyName, CCTextureAtlas * pCCTextureAtlas, CCBReader * pCCBReader);
 
 protected:
         CCDictionary* m_pCustomProperties;

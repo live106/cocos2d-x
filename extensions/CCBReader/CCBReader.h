@@ -59,7 +59,8 @@ enum {
     kCCBPropTypeString,
     kCCBPropTypeBlockCCControl,
     kCCBPropTypeFloatScale,
-    kCCBPropTypeFloatXY
+    kCCBPropTypeFloatXY,
+    kCCBPropTypeTextureAtlas
 };
 
 enum {
