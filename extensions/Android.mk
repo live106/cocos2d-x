@@ -23,6 +23,7 @@ CCBReader/CCParticleSystemQuadLoader.cpp \
 CCBReader/CCScale9SpriteLoader.cpp \
 CCBReader/CCScrollViewLoader.cpp \
 CCBReader/CCSpriteLoader.cpp \
+CCBReader/CCSpriteBatchNodeLoader.cpp \
 CCBReader/CCBAnimationManager.cpp \
 CCBReader/CCBKeyframe.cpp \
 CCBReader/CCBSequence.cpp \
