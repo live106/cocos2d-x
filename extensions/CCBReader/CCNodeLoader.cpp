@@ -872,7 +872,8 @@ BlockCCControlData * CCNodeLoader::parsePropTypeBlockCCControl(CCNode * pNode, C
 }
 
 CCNode * CCNodeLoader::parsePropTypeCCBFile(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader) {
-    std::string ccbFileName = pCCBReader->getCCBRootPath() + pCCBReader->readCachedString();
+//    std::string ccbFileName = pCCBReader->getCCBRootPath() + pCCBReader->readCachedString();
+        std::string ccbFileName = "ccbi/" + pCCBReader->readCachedString();
 
     /* Change path extension to .ccbi. */
     std::string ccbFileWithoutPathExtension = CCBReader::deletePathExtension(ccbFileName.c_str());
