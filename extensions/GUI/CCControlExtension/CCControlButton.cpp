@@ -692,7 +692,12 @@ void CCControlButton::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
     
     if (isTouchInside(pTouch))
     {
-        sendActionsForControlEvents(CCControlEventTouchUpInside);        
+        sendActionsForControlEvents(CCControlEventTouchUpInside);
+        
+        if (m_touchTarget && m_touchCall)
+        {
+            (m_touchTarget->*m_touchCall)();
+        }
     }
     else
     {
@@ -763,6 +768,16 @@ CCControlButton* CCControlButton::create()
     }
     CC_SAFE_DELETE(pControlButton);
     return NULL;
+}
+
+//Vincent added
+CCObject* CCControlButton::m_touchTarget = NULL;
+SEL_CallFunc CCControlButton::m_touchCall = NULL;
+
+void CCControlButton::RegistTouchEvent(CCObject* obj, SEL_CallFunc call)
+{
+    m_touchTarget = obj;
+    m_touchCall = call;
 }
 
 NS_CC_EXT_END

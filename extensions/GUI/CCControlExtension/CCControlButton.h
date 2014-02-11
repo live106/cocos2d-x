@@ -242,6 +242,15 @@ public:
     virtual void setBackgroundSpriteFrameForState(CCSpriteFrame * spriteFrame, CCControlState state);
 
     static CCControlButton* create();
+    
+    //Vincent added
+public:
+    static void RegistTouchEvent(CCObject* obj, SEL_CallFunc call);
+    
+private:
+    static CCObject* m_touchTarget;
+    static SEL_CallFunc m_touchCall;
+    
 };
 
 // end of GUI group
