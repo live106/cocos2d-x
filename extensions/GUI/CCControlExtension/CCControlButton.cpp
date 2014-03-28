@@ -214,19 +214,19 @@ void CCControlButton::setHighlighted(bool enabled)
     
     CCControl::setHighlighted(enabled);
 
-    CCAction *action = getActionByTag(kZoomActionTag);
-    if (action)
-    {
-        stopAction(action);        
-    }
+//    CCAction *action = getActionByTag(kZoomActionTag);
+//    if (action)
+//    {
+//        stopAction(action);        
+//    }
     needsLayout();
-    if( m_zoomOnTouchDown )
-    {
-        float scaleValue = (isHighlighted() && isEnabled() && !isSelected()) ? 1.1f : 1.0f;
-        CCAction *zoomAction = CCScaleTo::create(0.05f, scaleValue);
-        zoomAction->setTag(kZoomActionTag);
-        runAction(zoomAction);
-    }
+//    if( m_zoomOnTouchDown )
+//    {
+//        float scaleValue = (isHighlighted() && isEnabled() && !isSelected()) ? 1.1f : 1.0f;
+//        CCAction *zoomAction = CCScaleTo::create(0.05f, scaleValue);
+//        zoomAction->setTag(kZoomActionTag);
+//        runAction(zoomAction);
+//    }
 }
 
 void CCControlButton::setZoomOnTouchDown(bool zoomOnTouchDown)
