@@ -32,6 +32,7 @@ THE SOFTWARE.
 #include "support/data_support/ccCArray.h"
 #include "ccMacros.h"
 #include <algorithm>
+#include <typeinfo>
 
 NS_CC_BEGIN
 
@@ -118,7 +119,8 @@ void CCTouchDispatcher::forceAddHandler(CCTouchHandler *pHandler, CCArray *pArra
  
              if (h->getDelegate() == pHandler->getDelegate())
              {
-                 CCAssert(0, "");
+                 CCLog("CCTouchDispatcher::forceAddHandler crash class = %s", typeid(*(pHandler->getDelegate())).name());
+//                 CCAssert(0, "");
                  return;
              }
          }
