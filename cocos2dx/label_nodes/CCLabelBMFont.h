@@ -189,7 +189,8 @@ http://www.angelcode.com/products/bmfont/ (Free, Windows only)
 @since v0.8
 */
 
-class CC_DLL CCLabelBMFont : public CCSpriteBatchNode, public CCLabelProtocol, public CCRGBAProtocol
+class CC_DLL CCLabelBMFont : public CCSpriteBatchNode, public CCLabelProtocol
+//, public CCRGBAProtocol
 {
 public:
     /**
