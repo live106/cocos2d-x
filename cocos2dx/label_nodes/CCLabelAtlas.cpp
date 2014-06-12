@@ -43,6 +43,20 @@ NS_CC_BEGIN
 
 //CCLabelAtlas - Creation & Init
 
+CCLabelAtlas * CCLabelAtlas::create(const char *string, const char *charMapFile, unsigned int itemWidth, unsigned int itemHeight, unsigned int startCharMap, float space)
+{
+    CCLabelAtlas *pRet = new CCLabelAtlas();
+    if(pRet)
+    {
+        pRet->m_space = space;
+        pRet->initWithString(string, charMapFile, itemWidth, itemHeight, startCharMap);
+        pRet->autorelease();
+        return pRet;
+    }
+    CC_SAFE_DELETE(pRet);
+    return NULL;
+}
+
 CCLabelAtlas* CCLabelAtlas::create(const char *string, const char *charMapFile, unsigned int itemWidth, int unsigned itemHeight, unsigned int startCharMap)
 {
     CCLabelAtlas *pRet = new CCLabelAtlas();
@@ -159,16 +173,16 @@ void CCLabelAtlas::updateAtlasValues()
         quads[i].br.texCoords.u = right;
         quads[i].br.texCoords.v = bottom;
 
-        quads[i].bl.vertices.x = (float) (i * m_uItemWidth);
+        quads[i].bl.vertices.x = (float) (i * (m_uItemWidth + m_space));
         quads[i].bl.vertices.y = 0;
         quads[i].bl.vertices.z = 0.0f;
-        quads[i].br.vertices.x = (float)(i * m_uItemWidth + m_uItemWidth);
+        quads[i].br.vertices.x = (float)(i * (m_uItemWidth + m_space) + m_uItemWidth);
         quads[i].br.vertices.y = 0;
         quads[i].br.vertices.z = 0.0f;
-        quads[i].tl.vertices.x = (float)(i * m_uItemWidth);
+        quads[i].tl.vertices.x = (float)(i * (m_uItemWidth + m_space));
         quads[i].tl.vertices.y = (float)(m_uItemHeight);
         quads[i].tl.vertices.z = 0.0f;
-        quads[i].tr.vertices.x = (float)(i * m_uItemWidth + m_uItemWidth);
+        quads[i].tr.vertices.x = (float)(i * (m_uItemWidth + m_space) + m_uItemWidth);
         quads[i].tr.vertices.y = (float)(m_uItemHeight);
         quads[i].tr.vertices.z = 0.0f;
         ccColor4B c = { _displayedColor.r, _displayedColor.g, _displayedColor.b, _displayedOpacity };
@@ -199,6 +213,10 @@ void CCLabelAtlas::setString(const char *label)
     this->updateAtlasValues();
 
     CCSize s = CCSizeMake(len * m_uItemWidth, m_uItemHeight);
+    if (len > 0)
+    {
+        s.width += (len - 1) * m_space;
+    }
 
     this->setContentSize(s);
 

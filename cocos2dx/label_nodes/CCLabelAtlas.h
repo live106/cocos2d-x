@@ -57,6 +57,7 @@ public:
      */
     CCLabelAtlas()
         :m_sString("")
+        , m_space(0)
     {}
     /**
      *  @js NA
@@ -66,7 +67,10 @@ public:
     { 
         m_sString.clear(); 
     }
-
+    
+    /* add charactor space */
+    static CCLabelAtlas * create(const char *string, const char *charMapFile, unsigned int itemWidth, unsigned int itemHeight, unsigned int startCharMap, float space);
+    
     /** creates the CCLabelAtlas with a string, a char map file(the atlas), the width and height of each element and the starting char of the atlas */
     static CCLabelAtlas * create(const char *string, const char *charMapFile, unsigned int itemWidth, unsigned int itemHeight, unsigned int startCharMap);
     
@@ -101,6 +105,8 @@ protected:
     std::string m_sString;
     // the first char in the charmap
     unsigned int m_uMapStartChar;
+    
+    float m_space;
 };
 
 // end of GUI group
