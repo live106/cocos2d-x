@@ -245,11 +245,11 @@ public:
     
     //Vincent added
 public:
-    static void RegistTouchEvent(CCObject* obj, SEL_CallFunc call);
+    static void RegistTouchEvent(CCObject* obj, SEL_CallFuncN call);
     
 private:
     static CCObject* m_touchTarget;
-    static SEL_CallFunc m_touchCall;
+    static SEL_CallFuncN m_touchCall;
     
 };
 

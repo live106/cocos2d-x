@@ -696,7 +696,7 @@ void CCControlButton::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
         
         if (m_touchTarget && m_touchCall)
         {
-            (m_touchTarget->*m_touchCall)();
+            (m_touchTarget->*m_touchCall)(this);
         }
     }
     else
@@ -772,9 +772,9 @@ CCControlButton* CCControlButton::create()
 
 //Vincent added
 CCObject* CCControlButton::m_touchTarget = NULL;
-SEL_CallFunc CCControlButton::m_touchCall = NULL;
+SEL_CallFuncN CCControlButton::m_touchCall = NULL;
 
-void CCControlButton::RegistTouchEvent(CCObject* obj, SEL_CallFunc call)
+void CCControlButton::RegistTouchEvent(CCObject* obj, SEL_CallFuncN call)
 {
     m_touchTarget = obj;
     m_touchCall = call;
