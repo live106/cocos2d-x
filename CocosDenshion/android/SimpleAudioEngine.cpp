@@ -124,6 +124,7 @@ void SimpleAudioEngine::preloadBackgroundMusic(const char* pszFilePath)
 
 void SimpleAudioEngine::playBackgroundMusic(const char* pszFilePath, bool bLoop)
 {
+    if (!m_enableBGM) return;
 	std::string fullPath = getFullPathWithoutAssetsPrefix(pszFilePath);
     playBackgroundMusicJNI(fullPath.c_str(), bLoop);
 }
@@ -194,6 +195,7 @@ void SimpleAudioEngine::setEffectsVolume(float volume)
 
 unsigned int SimpleAudioEngine::playEffect(const char* pszFilePath, bool bLoop)
 {
+    if (!m_enableEffect) return 0;
 	std::string fullPath = getFullPathWithoutAssetsPrefix(pszFilePath);
 	if (s_bI9100)
 	{

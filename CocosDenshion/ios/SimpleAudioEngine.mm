@@ -183,6 +183,7 @@ void SimpleAudioEngine::preloadBackgroundMusic(const char* pszFilePath)
 
 void SimpleAudioEngine::playBackgroundMusic(const char* pszFilePath, bool bLoop)
 {
+    if (!m_enableBGM) return;
     // Changing file path to full path
     std::string fullPath = CCFileUtils::sharedFileUtils()->fullPathForFilename(pszFilePath);
     static_playBackgroundMusic(fullPath.c_str(), bLoop);
@@ -240,6 +241,7 @@ void SimpleAudioEngine::setEffectsVolume(float volume)
 
 unsigned int SimpleAudioEngine::playEffect(const char* pszFilePath, bool bLoop)
 {
+    if (!m_enableEffect) return 0;
     // Changing file path to full path
     std::string fullPath = CCFileUtils::sharedFileUtils()->fullPathForFilename(pszFilePath);
     return static_playEffect(fullPath.c_str(), bLoop);

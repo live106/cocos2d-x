@@ -235,6 +235,15 @@ public:
     @param[in]        pszFilePath        The path of the effect file,or the FileName of T_SoundResInfo
     */
     void unloadEffect(const char* pszFilePath);
+    
+//Vincent add
+public:
+    void setEnableBGM(bool flag) { m_enableBGM = flag; }
+    void setEnableEffect(bool flag) { m_enableEffect = flag; }
+private:
+    bool m_enableBGM;
+    bool m_enableEffect;
+    
 };
 
 } // end of namespace CocosDenshion
