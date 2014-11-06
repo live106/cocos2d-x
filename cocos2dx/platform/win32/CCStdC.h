@@ -101,7 +101,7 @@ NS_CC_END
 
 #else
 
-//#include <winsock.h>
+#include <winsock.h>
 
 #endif // __MINGW32__
 

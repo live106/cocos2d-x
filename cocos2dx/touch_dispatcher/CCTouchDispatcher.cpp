@@ -119,8 +119,8 @@ void CCTouchDispatcher::forceAddHandler(CCTouchHandler *pHandler, CCArray *pArra
  
              if (h->getDelegate() == pHandler->getDelegate())
              {
-                 CCLog("CCTouchDispatcher::forceAddHandler crash class = %s", typeid(*(pHandler->getDelegate())).name());
 //                 CCAssert(0, "");
+                 CCLog("CCTouchDispatcher::forceAddHandler crash class = %s", typeid(*(pHandler->getDelegate())).name());
                  return;
              }
          }

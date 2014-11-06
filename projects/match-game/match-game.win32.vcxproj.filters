@@ -1,0 +1,1211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{b224e820-f7c5-41a9-8c38-94e79eb0e6af}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{a0d771ac-7e7d-480b-b432-8d112b37dcce}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{a593cc3b-a76a-4eda-bdab-a8dc63c7072e}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\CloseSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\CloseNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\basic.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\match.bmp">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\match.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\StartNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\StartSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\GameBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\ReturnNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\ReturnSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\game.lua" />
+    <None Include="Resource\test.txt" />
+    <None Include="Resource\lua\game.lua" />
+    <None Include="Classes\lua\Makefile" />
+    <None Include="Resource\DiamondGameBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\LevelBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\MenuBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\slot.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\MatrixGameBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\CalcGameBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\LevelsBackGround.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-0-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-1-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-2-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-3-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-4-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-5-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-6-7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\sprites_test\sprite-7-6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\atlastest.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Upsidedown.plist" />
+    <None Include="Resource\Images\b1-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\b1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\b2-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\b2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background1-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background2-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background3-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\background3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\ball-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\ball.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\bitmapFontTest3.fnt" />
+    <None Include="Resource\Images\bitmapFontTest3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\blocks-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\blocks.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\BoilingFoam.plist" />
+    <None Include="Resource\Images\btn-about-normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\btn-about-selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\btn-highscores-normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\btn-highscores-selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\btn-play-normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\btn-play-selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\BurstPipe.plist" />
+    <None Include="Resource\Images\close-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\close.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Comet.plist" />
+    <None Include="Resource\Images\Comet.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\debian.plist" />
+    <None Include="Resource\Images\ExplodingRing.plist" />
+    <None Include="Resource\Images\f1-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\f1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\f2-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\f2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\fire-grayscale.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\fire.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Flower.plist" />
+    <None Include="Resource\Images\Fog.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\fps_images.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Galaxy.plist" />
+    <None Include="Resource\Images\grossini-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_01.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_02.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_03.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_04.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_05.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_06.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_07.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_08.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_09.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_10.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_11.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_12.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_13.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_14.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_atlas-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_atlas-mono.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossini_dance_atlas.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossinis_sister1-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossinis_sister1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossinis_sister2-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\grossinis_sister2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Icon.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\landscape-1024x1024.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\LavaFlow.plist" />
+    <None Include="Resource\Images\menuitemsprite.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\paddle-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\paddle.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\particles-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\particles.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Pea.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\piece.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\PlanetCute-1024x1024.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\powered.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\r1-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\r1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\r2-hd.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\r2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\SendScoreButton.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\SendScoreButtonPressed.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\snow.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\SpinningPeas.plist" />
+    <None Include="Resource\Images\SpinningPeas.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\Spiral.plist" />
+    <None Include="Resource\Images\SpookyPeas.plist" />
+    <None Include="Resource\Images\SpookyPeas.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\spritesheet1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\stars-grayscale.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\stars.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\stars2-grayscale.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\stars2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\streak.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\test_image.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\texture1024x1024.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\texture2048x2048.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\Images\texture512x512.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\music\mixdemo1.mp3" />
+    <None Include="Resource\img\menu\background.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\menu\social.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\menu\match.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\menu\option.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\menu\play.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\blackground.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\loading\workroom.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\loading\loading.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\lock.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\10.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\11.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\12.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\13.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\14.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\15.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\4.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\5.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\6.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\7.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\8.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\9.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\background.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\victory.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\background.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\del.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\m.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\next.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\reset.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\rule.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\submit.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\ending\background.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\camp\yellowcamp.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\camp\campselect.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\camp\cartoons.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\camp\redcamp.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\level21.lua" />
+    <None Include="Resource\lua\level22.lua" />
+    <None Include="Resource\lua\level23.lua" />
+    <None Include="Resource\lua\level24.lua" />
+    <None Include="Resource\lua\level25.lua" />
+    <None Include="Resource\lua\levle5.lua" />
+    <None Include="Resource\img\game\backward.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\backward_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\del_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\failed.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\forward.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\forward_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\progress.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\reset_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\return_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\rule_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\submit_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\texture\fire.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\righttree.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\return.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\mood.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\lefttree.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\grass.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\continue_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\continue_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\bg.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\victory-stone.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\bg-none.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter1\level1.lua" />
+    <None Include="Resource\lua\charpter1\level9.lua" />
+    <None Include="Resource\lua\charpter1\level10.lua" />
+    <None Include="Resource\lua\charpter1\level11.lua" />
+    <None Include="Resource\lua\charpter1\level12.lua" />
+    <None Include="Resource\lua\charpter1\level13.lua" />
+    <None Include="Resource\lua\charpter1\level14.lua" />
+    <None Include="Resource\lua\charpter1\level15.lua" />
+    <None Include="Resource\lua\charpter1\level16.lua" />
+    <None Include="Resource\lua\charpter1\level17.lua" />
+    <None Include="Resource\lua\charpter1\level18.lua" />
+    <None Include="Resource\lua\charpter1\level19.lua" />
+    <None Include="Resource\lua\charpter1\level2.lua" />
+    <None Include="Resource\lua\charpter1\level20.lua" />
+    <None Include="Resource\lua\charpter1\level3.lua" />
+    <None Include="Resource\lua\charpter1\level4.lua" />
+    <None Include="Resource\lua\charpter1\level5.lua" />
+    <None Include="Resource\lua\charpter1\level6.lua" />
+    <None Include="Resource\lua\charpter1\level7.lua" />
+    <None Include="Resource\lua\charpter1\level8.lua" />
+    <None Include="Resource\lua\charpter1\charpter.lua" />
+    <None Include="Resource\img\game\monkey\push1.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\monkey\push3.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\monkey\push2.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\monkey\monkeypush.plist" />
+    <None Include="Resource\img\game\monkey\monkeypush.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\gameelements.plist" />
+    <None Include="Resource\img\game\successboard.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\gameelements.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\monkeypush.plist" />
+    <None Include="Resource\img\game\monkeypush.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\pauseboard.plist" />
+    <None Include="Resource\img\game\pauseboard.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\stonetree.plist" />
+    <None Include="Resource\img\game\stonetree.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\successboard.plist" />
+    <None Include="Resource\img\game\monkey.plist" />
+    <None Include="Resource\img\game\monkey.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter4\level9.lua" />
+    <None Include="Resource\lua\charpter4\charpter.lua" />
+    <None Include="Resource\lua\charpter4\level1.lua" />
+    <None Include="Resource\lua\charpter4\level10.lua" />
+    <None Include="Resource\lua\charpter4\level11.lua" />
+    <None Include="Resource\lua\charpter4\level12.lua" />
+    <None Include="Resource\lua\charpter4\level13.lua" />
+    <None Include="Resource\lua\charpter4\level14.lua" />
+    <None Include="Resource\lua\charpter4\level15.lua" />
+    <None Include="Resource\lua\charpter4\level16.lua" />
+    <None Include="Resource\lua\charpter4\level17.lua" />
+    <None Include="Resource\lua\charpter4\level18.lua" />
+    <None Include="Resource\lua\charpter4\level19.lua" />
+    <None Include="Resource\lua\charpter4\level2.lua" />
+    <None Include="Resource\lua\charpter4\level20.lua" />
+    <None Include="Resource\lua\charpter4\level3.lua" />
+    <None Include="Resource\lua\charpter4\level4.lua" />
+    <None Include="Resource\lua\charpter4\level5.lua" />
+    <None Include="Resource\lua\charpter4\level6.lua" />
+    <None Include="Resource\lua\charpter4\level7.lua" />
+    <None Include="Resource\lua\charpter4\level8.lua" />
+    <None Include="Resource\img\charpter\back.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\chapter.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\digital_decryption.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\graphic.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\summary.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter1\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter1\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter4\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter4\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter3\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter3\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter2\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter2\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\container.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\menu\menus.plist" />
+    <None Include="Resource\img\menu\menus.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\charpter\boat.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter5\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter5\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter6\charpter_normal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\lua\charpter6\charpter_selected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\game.plist" />
+    <None Include="Resource\fonts\fonts.fnt" />
+    <None Include="Resource\fonts\fonts_0.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\game\woodboard.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\gamelayer\button_title.plist" />
+    <None Include="Resource\img\gamelayer\mountain_stone.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\gamelayer\button_title.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\gamelayer\mountain_stone.plist" />
+    <None Include="Resource\img\level\level.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\back.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\level-lock.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\5.jpg">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\4.jpg">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\3.jpg">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="Resource\img\level\0.png">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win32\main.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\AppDelegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\odsocket.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lapi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lauxlib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lcode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\ldebug.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\ldo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lfunc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lgc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\llex.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\llimits.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lmem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lobject.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lopcodes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lparser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lstate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lstring.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\ltable.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\ltm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lua.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\luaconf.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lualib.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lundump.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lvm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lua\lzio.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFLoadingLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFMenuLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFGameLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFLevelsLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFMatchGame.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFMatch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFSlot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFCharpterLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFGameEngine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFSprite.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFLuaConfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFLevelLoader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFConfiguration.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\tinyxml\tinystr.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\tinyxml\tinyxml.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CFAbsLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\lib\CFScoreBoard.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win32\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\odsocket.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lapi.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lauxlib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lbaselib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lcode.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ldblib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ldebug.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ldo.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ldump.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lfunc.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lgc.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\linit.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\liolib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\llex.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lmathlib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lmem.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\loadlib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lobject.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lopcodes.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\loslib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lparser.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lstate.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lstring.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lstrlib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ltable.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ltablib.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\ltm.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lua.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\luac.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lundump.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lvm.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\lzio.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lua\print.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFLoadingLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFMenuLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFGameLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFLevelsLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFMatchGame.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFMatch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFSlot.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFCharpterLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFGameEngine.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFSprite.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFLuaConfig.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFLevelLoader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFConfiguration.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\tinyxml\tinystr.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\tinyxml\tinyxml.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\tinyxml\tinyxmlerror.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\tinyxml\tinyxmlparser.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CFAbsLayer.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\lib\CFScoreBoard.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

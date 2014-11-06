@@ -236,14 +236,14 @@ public:
     */
     void unloadEffect(const char* pszFilePath);
     
-//Vincent add
-public:
-    void setEnableBGM(bool flag) { m_enableBGM = flag; }
-    void setEnableEffect(bool flag) { m_enableEffect = flag; }
-private:
-    bool m_enableBGM;
-    bool m_enableEffect;
-    
+    //Vincent add
+    public:
+        void setEnableBGM(bool flag) { m_enableBGM = flag; }
+        void setEnableEffect(bool flag) { m_enableEffect = flag; }
+    private:
+        bool m_enableBGM;
+        bool m_enableEffect;
+
 };
 
 } // end of namespace CocosDenshion

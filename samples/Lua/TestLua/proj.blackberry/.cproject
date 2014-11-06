@@ -127,7 +127,7 @@
 					<externalSetting>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="includePath" name="/cocos2dx"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="libraryPath" name="/cocos2dx/Device-Debug"/>
-						<entry flags="RESOLVED" kind="libraryFile" name="cocos2dx"/>
+						<entry flags="RESOLVED" kind="libraryFile" name="cocos2dx" srcPrefixMapping="" srcRootPath=""/>
 					</externalSetting>
 				</externalSettings>
 			</storageModule>
@@ -759,4 +759,5 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.qnx.tools.ide.qde.managedbuilder.core.qccScannerInfo"/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 </cproject>

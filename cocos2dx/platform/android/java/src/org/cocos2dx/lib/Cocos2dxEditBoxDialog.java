@@ -33,12 +33,10 @@ import android.text.InputFilter;
 import android.text.InputType;
 import android.util.TypedValue;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -119,7 +117,6 @@ public class Cocos2dxEditBoxDialog extends Dialog {
 	// Fields
 	// ===========================================================
 
-	private Cocos2dxEditBoxDialog mDialog;
 	private EditText mInputEditText;
 	private TextView mTextViewTitle;
 
@@ -159,7 +156,6 @@ public class Cocos2dxEditBoxDialog extends Dialog {
 		final LinearLayout layout = new LinearLayout(this.getContext());
 		layout.setOrientation(LinearLayout.VERTICAL);
 
-		mDialog = this;
 		final LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT);
 
 		this.mTextViewTitle = new TextView(this.getContext());
@@ -168,29 +164,11 @@ public class Cocos2dxEditBoxDialog extends Dialog {
 		this.mTextViewTitle.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
 		layout.addView(this.mTextViewTitle, textviewParams);
 
-		LinearLayout editLayout = new LinearLayout(this.getContext());
-		editLayout.setOrientation(LinearLayout.HORIZONTAL);
 		this.mInputEditText = new EditText(this.getContext());
-		final LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//		editTextParams.leftMargin = editTextParams.rightMargin = this.convertDipsToPixels(10);
-		editTextParams.weight = 1;
+		final LinearLayout.LayoutParams editTextParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+		editTextParams.leftMargin = editTextParams.rightMargin = this.convertDipsToPixels(10);
 
-		editLayout.addView(this.mInputEditText, editTextParams);
-		
-		//confirm button
-		Button button = new Button(this.getContext());
-		button.setText("  确定  ");
-		button.setOnClickListener(new View.OnClickListener() {
-		    public void onClick(View v) {
-		        // Perform action on click
-		    	Cocos2dxHelper.setEditTextDialogResult(mInputEditText.getText().toString());
-		    	mDialog.hide();
-		    }
-		});
-		LinearLayout.LayoutParams confrimBtnParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-		editLayout.addView(button, confrimBtnParams);
-		
-		layout.addView(editLayout);
+		layout.addView(this.mInputEditText, editTextParams);
 
 		this.setContentView(layout, layoutParams);
 
@@ -308,113 +286,6 @@ public class Cocos2dxEditBoxDialog extends Dialog {
 		});
 	}
 
-	static EditText createEditText(final Context pContext, 
-			final String pMessage, final int pInputMode, 
-			final int pInputFlag, final int pReturnType, 
-			final int pMaxLength)
-	{
-		final EditText input = new EditText(pContext);
-
-		input.setText(pMessage);
-
-		int oldImeOptions = input.getImeOptions();
-		input.setImeOptions(oldImeOptions | EditorInfo.IME_FLAG_NO_EXTRACT_UI);
-		oldImeOptions = input.getImeOptions();
-
-		int inputModeContraints = 0;
-		int inputFlagConstraints = 0;
-		switch (pInputMode) {
-			case 0:
-				inputModeContraints = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE;
-				break;
-			case 1:
-				inputModeContraints = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS;
-				break;
-			case 2:
-				inputModeContraints = InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_SIGNED;
-				break;
-			case 3:
-				inputModeContraints = InputType.TYPE_CLASS_PHONE;
-				break;
-			case 4:
-				inputModeContraints = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_URI;
-				break;
-			case 5:
-				inputModeContraints = InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED;
-				break;
-			case 6:
-				inputModeContraints = InputType.TYPE_CLASS_TEXT;
-				break;
-			default:
-
-				break;
-		}
-
-//		if (this.mIsMultiline) {
-//			inputModeContraints |= InputType.TYPE_TEXT_FLAG_MULTI_LINE;
-//		}
-
-		input.setInputType(inputModeContraints | inputFlagConstraints);
-
-		switch (pInputFlag) {
-			case 0:
-				inputFlagConstraints = InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD;
-				break;
-			case 1:
-				inputFlagConstraints = InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
-				break;
-			case 2:
-				inputFlagConstraints = InputType.TYPE_TEXT_FLAG_CAP_WORDS;
-				break;
-			case 3:
-				inputFlagConstraints = InputType.TYPE_TEXT_FLAG_CAP_SENTENCES;
-				break;
-			case 4:
-				inputFlagConstraints = InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS;
-				break;
-			default:
-				break;
-		}
-
-		input.setInputType(inputFlagConstraints | inputModeContraints);
-
-		switch (pReturnType) {
-			case 0:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_NONE);
-				break;
-			case 1:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_DONE);
-				break;
-			case 2:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_SEND);
-				break;
-			case 3:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_SEARCH);
-				break;
-			case 4:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_GO);
-				break;
-			default:
-				input.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_NONE);
-				break;
-		}
-
-		if (pMaxLength > 0) {
-			input.setFilters(new InputFilter[] { new InputFilter.LengthFilter(pMaxLength) });
-		}
-
-		final Handler initHandler = new Handler();
-		initHandler.postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				input.requestFocus();
-				final InputMethodManager imm = (InputMethodManager) pContext.getSystemService(Context.INPUT_METHOD_SERVICE);
-				imm.showSoftInput(input, 0);
-			}
-		}, 200);
-
-		return input;
-	}
 
 	// ===========================================================
 	// Getter & Setter

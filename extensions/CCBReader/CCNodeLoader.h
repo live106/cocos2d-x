@@ -5,6 +5,7 @@
 #include "cocos2d.h"
 #include "CCBReader.h"
 #include "CCBValue.h"
+#include "ExtensionMacros.h"
 
 NS_CC_EXT_BEGIN
 
@@ -46,7 +47,7 @@ class CCBReader;
  *  @js NA
  *  @lua NA
  */
-class CCNodeLoader : public CCObject {
+class CC_EX_DLL CCNodeLoader : public CCObject {
     public:
         CCNodeLoader();
         virtual ~CCNodeLoader();
@@ -87,6 +88,7 @@ class CCNodeLoader : public CCObject {
         virtual BlockCCControlData * parsePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
         virtual CCNode * parsePropTypeCCBFile(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
         virtual float * parsePropTypeFloatXY(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
+    
         virtual CCTextureAtlas * parsePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader);
 
 
@@ -119,6 +121,7 @@ class CCNodeLoader : public CCObject {
         virtual void onHandlePropTypeBlock(CCNode * pNode, CCNode * pParent, const char* pPropertyName, BlockData * pBlockData, CCBReader * pCCBReader);
         virtual void onHandlePropTypeBlockCCControl(CCNode * pNode, CCNode * pParent, const char* pPropertyName, BlockCCControlData * pBlockCCControlData, CCBReader * pCCBReader);
         virtual void onHandlePropTypeCCBFile(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCNode * pCCBFileNode, CCBReader * pCCBReader);
+    
         virtual void onHandlePropTypeTextureAtlas(CCNode * pNode, CCNode * pParent, const char * pPropertyName, CCTextureAtlas * pCCTextureAtlas, CCBReader * pCCBReader);
 
 protected:

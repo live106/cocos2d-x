@@ -50,7 +50,7 @@ NS_CC_EXT_BEGIN
  */
 
 /** @class CCControlButton Button control for Cocos2D. */
-class CCControlButton : public CCControl
+class CC_EX_DLL CCControlButton : public CCControl
 {        
 public:
     CCControlButton();
@@ -244,12 +244,12 @@ public:
     static CCControlButton* create();
     
     //Vincent added
-public:
-    static void RegistTouchEvent(CCObject* obj, SEL_CallFuncN call);
-    
-private:
-    static CCObject* m_touchTarget;
-    static SEL_CallFuncN m_touchCall;
+    public:
+        static void RegistTouchEvent(CCObject* obj, SEL_CallFuncN call);
+
+    private:
+        static CCObject* m_touchTarget;
+        static SEL_CallFuncN m_touchCall;
     
 };
 

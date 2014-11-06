@@ -14,6 +14,7 @@
 #include "CCControlButtonLoader.h"
 #include "CCParticleSystemQuadLoader.h"
 #include "CCScrollViewLoader.h"
+
 #include "CCSpriteBatchNodeLoader.h"
 
 
@@ -42,6 +43,7 @@ void CCNodeLoaderLibrary::registerDefaultCCNodeLoaders() {
     this->registerCCNodeLoader("CCMenuItemImage", CCMenuItemImageLoader::loader());
     this->registerCCNodeLoader("CCControlButton", CCControlButtonLoader::loader());
     this->registerCCNodeLoader("CCParticleSystemQuad", CCParticleSystemQuadLoader::loader());
+    
     this->registerCCNodeLoader("CCSpriteBatchNode", CCSpriteBatchNodeLoader::loader());
 }
 

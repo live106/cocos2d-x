@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="CCBReader">
@@ -12,6 +12,9 @@
     </Filter>
     <Filter Include="GUI\CCScrollView">
       <UniqueIdentifier>{46797895-f71d-4ddb-b381-d0884e678d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics_nodes">
+      <UniqueIdentifier>{d5806151-7ae1-4fef-af5a-2fa1d1c7377b}</UniqueIdentifier>
     </Filter>
     <Filter Include="LocalStorage">
       <UniqueIdentifier>{4da8061d-80f3-45fd-aa7e-2c0a96701b79}</UniqueIdentifier>
@@ -234,9 +237,7 @@
     <ClCompile Include="..\spine\CCSkeletonAnimation.cpp">
       <Filter>spine</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\external\wxsqlite3\src\sqlite3secure.c">
-      <Filter>wxsqlite</Filter>
-    </ClCompile>
+
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GUI\CCScrollView\CCScrollView.h">

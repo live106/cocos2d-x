@@ -129,8 +129,10 @@ void ccArrayRemoveArray(ccArray *arr, ccArray *minusArr);
  matching instances in arr will be removed. */
 void ccArrayFullRemoveArray(ccArray *arr, ccArray *minusArr);
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS) || (CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
 // #pragma mark -
 // #pragma mark ccCArray for Values (c structures)
+#endif
 
 typedef struct _ccCArray {
     unsigned int num, max;
@@ -138,6 +140,7 @@ typedef struct _ccCArray {
 } ccCArray;
 
 /** Allocates and initializes a new C array with specified capacity */
+//ccCArray* ccCArrayNew(unsigned int capacity);
 CC_DLL ccCArray* ccCArrayNew(unsigned int capacity);
 
 /** Frees C array after removing all remaining values. Silently ignores nil arr. */
@@ -156,6 +159,7 @@ unsigned int ccCArrayGetIndexOfValue(ccCArray *arr, void* value);
 bool ccCArrayContainsValue(ccCArray *arr, void* value);
 
 /** Inserts a value at a certain position. Behavior undefined if array doesn't have enough capacity */
+//void ccCArrayInsertValueAtIndex( ccCArray *arr, void* value, unsigned int index);
 CC_DLL void ccCArrayInsertValueAtIndex( ccCArray *arr, void* value, unsigned int index);
 
 /** Appends an value. Behavior undefined if array doesn't have enough capacity. */

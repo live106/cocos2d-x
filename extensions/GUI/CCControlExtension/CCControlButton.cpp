@@ -214,19 +214,19 @@ void CCControlButton::setHighlighted(bool enabled)
     
     CCControl::setHighlighted(enabled);
 
-//    CCAction *action = getActionByTag(kZoomActionTag);
-//    if (action)
-//    {
-//        stopAction(action);        
-//    }
+    CCAction *action = getActionByTag(kZoomActionTag);
+    if (action)
+    {
+        stopAction(action);        
+    }
     needsLayout();
-//    if( m_zoomOnTouchDown )
-//    {
-//        float scaleValue = (isHighlighted() && isEnabled() && !isSelected()) ? 1.1f : 1.0f;
-//        CCAction *zoomAction = CCScaleTo::create(0.05f, scaleValue);
-//        zoomAction->setTag(kZoomActionTag);
-//        runAction(zoomAction);
-//    }
+    if( m_zoomOnTouchDown )
+    {
+        float scaleValue = (isHighlighted() && isEnabled() && !isSelected()) ? 1.1f : 1.0f;
+        CCAction *zoomAction = CCScaleTo::create(0.05f, scaleValue);
+        zoomAction->setTag(kZoomActionTag);
+        runAction(zoomAction);
+    }
 }
 
 void CCControlButton::setZoomOnTouchDown(bool zoomOnTouchDown)
@@ -769,15 +769,14 @@ CCControlButton* CCControlButton::create()
     CC_SAFE_DELETE(pControlButton);
     return NULL;
 }
-
 //Vincent added
 CCObject* CCControlButton::m_touchTarget = NULL;
 SEL_CallFuncN CCControlButton::m_touchCall = NULL;
-
 void CCControlButton::RegistTouchEvent(CCObject* obj, SEL_CallFuncN call)
 {
     m_touchTarget = obj;
     m_touchCall = call;
 }
+
 
 NS_CC_EXT_END

@@ -28,6 +28,8 @@ CCNode * CCNodeLoader::loadCCNode(CCNode * pParent, CCBReader * pCCBReader) {
     CCNode * ccNode = this->createCCNode(pParent, pCCBReader);
 
     //this->parseProperties(ccNode, pParent, pCCBReader);
+    if(m_pCustomProperties)
+        m_pCustomProperties->removeAllObjects();
 
     return ccNode;
 }
@@ -257,7 +259,7 @@ void CCNodeLoader::parseProperties(CCNode * pNode, CCNode * pParent, CCBReader *
                 }
                 break;
             }
-            case kCCBPropTypeByte: 
+            case kCCBPropTypeByte:
             {
                 unsigned char byte = this->parsePropTypeByte(pNode, pParent, pCCBReader, propertyName.c_str());
                 if(setProp) 
@@ -873,7 +875,8 @@ BlockCCControlData * CCNodeLoader::parsePropTypeBlockCCControl(CCNode * pNode, C
 
 CCNode * CCNodeLoader::parsePropTypeCCBFile(CCNode * pNode, CCNode * pParent, CCBReader * pCCBReader) {
 //    std::string ccbFileName = pCCBReader->getCCBRootPath() + pCCBReader->readCachedString();
-        std::string ccbFileName = "ccbi/" + pCCBReader->readCachedString();
+    //do not ugly ?
+    std::string ccbFileName = "ccbi/" + pCCBReader->readCachedString();
 
     /* Change path extension to .ccbi. */
     std::string ccbFileWithoutPathExtension = CCBReader::deletePathExtension(ccbFileName.c_str());
@@ -965,7 +968,6 @@ CCTextureAtlas * CCNodeLoader::parsePropTypeTextureAtlas(CCNode * pNode, CCNode 
         return NULL;
     }
 }
-
 
 void CCNodeLoader::onHandlePropTypePosition(CCNode * pNode, CCNode * pParent, const char* pPropertyName, CCPoint pPosition, CCBReader * pCCBReader) {
     if(strcmp(pPropertyName, PROPERTY_POSITION) == 0) {

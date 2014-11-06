@@ -192,6 +192,7 @@ protected:
 
     /* The layer recognizes some special properties, like cc_vertez */
     void parseInternalProperties();
+//    void setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid);
     void setupTileSprite(CCSprite* sprite, CCPoint pos, unsigned int gid, int offsetX = 0, int offsetY = 0);
     CCSprite* reusedTileWithRect(CCRect rect);
     int vertexZForPos(const CCPoint& pos);

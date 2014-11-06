@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AC71B78C-A6A9-4A61-8CDF-CC4DFE13092E}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\lua\lua;.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\;..\chipmunk\include\chipmunk;..\CocosDenshion\Include;..\lua\cocos2dx_support;..\lua\tolua;..\lua\src;..\Box2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libCocosDenshion.lib;liblua.lib</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>match-game.h</HeaderFileName>
+      <InterfaceIdentifierFileName>match-game_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>match-game_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/match-game.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.\win32;.\Classes;..\cocos2dx;..\cocos2dx\include;..\cocos2dx\platform;..\cocos2dx\platform\third_party\win32\OGLES;..\;..\chipmunk\include\chipmunk;..\CocosDenshion\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcocos2d.lib;libgles_cm.lib;libBox2d.lib;libchipmunk.lib;libCocosDenshion.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <HeaderFileName>match-game.h</HeaderFileName>
+      <InterfaceIdentifierFileName>match-game_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>match-game_p.c</ProxyFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)/match-game.tlb</TypeLibraryName>
+      <DllDataFileName>
+      </DllDataFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Classes\lua\Makefile" />
+    <None Include="Resource\fonts\fonts.fnt" />
+    <None Include="Resource\fonts\fonts_0.png" />
+    <None Include="Resource\game.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resource\basic.png" />
+    <None Include="Resource\CalcGameBackGround.png" />
+    <None Include="Resource\CloseNormal.png" />
+    <None Include="Resource\CloseSelected.png" />
+    <None Include="Resource\DiamondGameBackGround.png" />
+    <None Include="Resource\game.lua" />
+    <None Include="Resource\GameBackGround.png" />
+    <None Include="Resource\HelloWorld.png" />
+    <None Include="Resource\Images\atlastest.png" />
+    <None Include="Resource\Images\b1-hd.png" />
+    <None Include="Resource\Images\b1.png" />
+    <None Include="Resource\Images\b2-hd.png" />
+    <None Include="Resource\Images\b2.png" />
+    <None Include="Resource\Images\background.png" />
+    <None Include="Resource\Images\background1-hd.png" />
+    <None Include="Resource\Images\background1.png" />
+    <None Include="Resource\Images\background2-hd.png" />
+    <None Include="Resource\Images\background2.png" />
+    <None Include="Resource\Images\background3-hd.png" />
+    <None Include="Resource\Images\background3.png" />
+    <None Include="Resource\Images\ball-hd.png" />
+    <None Include="Resource\Images\ball.png" />
+    <None Include="Resource\Images\bitmapFontTest3.fnt" />
+    <None Include="Resource\Images\bitmapFontTest3.png" />
+    <None Include="Resource\Images\blocks-hd.png" />
+    <None Include="Resource\Images\blocks.png" />
+    <None Include="Resource\Images\BoilingFoam.plist" />
+    <None Include="Resource\Images\btn-about-normal.png" />
+    <None Include="Resource\Images\btn-about-selected.png" />
+    <None Include="Resource\Images\btn-highscores-normal.png" />
+    <None Include="Resource\Images\btn-highscores-selected.png" />
+    <None Include="Resource\Images\btn-play-normal.png" />
+    <None Include="Resource\Images\btn-play-selected.png" />
+    <None Include="Resource\Images\BurstPipe.plist" />
+    <None Include="Resource\Images\close-hd.png" />
+    <None Include="Resource\Images\close.png" />
+    <None Include="Resource\Images\Comet.plist" />
+    <None Include="Resource\Images\Comet.png" />
+    <None Include="Resource\Images\debian.plist" />
+    <None Include="Resource\Images\ExplodingRing.plist" />
+    <None Include="Resource\Images\f1-hd.png" />
+    <None Include="Resource\Images\f1.png" />
+    <None Include="Resource\Images\f2-hd.png" />
+    <None Include="Resource\Images\f2.png" />
+    <None Include="Resource\Images\fire-grayscale.png" />
+    <None Include="Resource\Images\fire.png" />
+    <None Include="Resource\Images\Flower.plist" />
+    <None Include="Resource\Images\Fog.png" />
+    <None Include="Resource\Images\fps_images.png" />
+    <None Include="Resource\Images\Galaxy.plist" />
+    <None Include="Resource\Images\grossini-hd.png" />
+    <None Include="Resource\Images\grossini.png" />
+    <None Include="Resource\Images\grossinis_sister1-hd.png" />
+    <None Include="Resource\Images\grossinis_sister1.png" />
+    <None Include="Resource\Images\grossinis_sister2-hd.png" />
+    <None Include="Resource\Images\grossinis_sister2.png" />
+    <None Include="Resource\Images\grossini_dance_01.png" />
+    <None Include="Resource\Images\grossini_dance_02.png" />
+    <None Include="Resource\Images\grossini_dance_03.png" />
+    <None Include="Resource\Images\grossini_dance_04.png" />
+    <None Include="Resource\Images\grossini_dance_05.png" />
+    <None Include="Resource\Images\grossini_dance_06.png" />
+    <None Include="Resource\Images\grossini_dance_07.png" />
+    <None Include="Resource\Images\grossini_dance_08.png" />
+    <None Include="Resource\Images\grossini_dance_09.png" />
+    <None Include="Resource\Images\grossini_dance_10.png" />
+    <None Include="Resource\Images\grossini_dance_11.png" />
+    <None Include="Resource\Images\grossini_dance_12.png" />
+    <None Include="Resource\Images\grossini_dance_13.png" />
+    <None Include="Resource\Images\grossini_dance_14.png" />
+    <None Include="Resource\Images\grossini_dance_atlas-hd.png" />
+    <None Include="Resource\Images\grossini_dance_atlas-mono.png" />
+    <None Include="Resource\Images\grossini_dance_atlas.png" />
+    <None Include="Resource\Images\HelloWorld.png" />
+    <None Include="Resource\Images\Icon.png" />
+    <None Include="Resource\Images\landscape-1024x1024.png" />
+    <None Include="Resource\Images\LavaFlow.plist" />
+    <None Include="Resource\Images\menuitemsprite.png" />
+    <None Include="Resource\Images\paddle-hd.png" />
+    <None Include="Resource\Images\paddle.png" />
+    <None Include="Resource\Images\particles-hd.png" />
+    <None Include="Resource\Images\particles.png" />
+    <None Include="Resource\Images\Pea.png" />
+    <None Include="Resource\Images\piece.png" />
+    <None Include="Resource\Images\PlanetCute-1024x1024.png" />
+    <None Include="Resource\Images\powered.png" />
+    <None Include="Resource\Images\r1-hd.png" />
+    <None Include="Resource\Images\r1.png" />
+    <None Include="Resource\Images\r2-hd.png" />
+    <None Include="Resource\Images\r2.png" />
+    <None Include="Resource\Images\SendScoreButton.png" />
+    <None Include="Resource\Images\SendScoreButtonPressed.png" />
+    <None Include="Resource\Images\snow.png" />
+    <None Include="Resource\Images\SpinningPeas.plist" />
+    <None Include="Resource\Images\SpinningPeas.png" />
+    <None Include="Resource\Images\Spiral.plist" />
+    <None Include="Resource\Images\SpookyPeas.plist" />
+    <None Include="Resource\Images\SpookyPeas.png" />
+    <None Include="Resource\Images\spritesheet1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-0-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-1-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-2-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-3-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-4-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-5-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-6-7.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-0.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-1.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-2.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-3.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-4.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-5.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-6.png" />
+    <None Include="Resource\Images\sprites_test\sprite-7-7.png" />
+    <None Include="Resource\Images\stars-grayscale.png" />
+    <None Include="Resource\Images\stars.png" />
+    <None Include="Resource\Images\stars2-grayscale.png" />
+    <None Include="Resource\Images\stars2.png" />
+    <None Include="Resource\Images\streak.png" />
+    <None Include="Resource\Images\test_image.png" />
+    <None Include="Resource\Images\texture1024x1024.png" />
+    <None Include="Resource\Images\texture2048x2048.png" />
+    <None Include="Resource\Images\texture512x512.png" />
+    <None Include="Resource\Images\Upsidedown.plist" />
+    <None Include="Resource\img\blackground.png" />
+    <None Include="Resource\img\camp\campselect.png" />
+    <None Include="Resource\img\camp\cartoons.png" />
+    <None Include="Resource\img\camp\redcamp.png" />
+    <None Include="Resource\img\camp\yellowcamp.png" />
+    <None Include="Resource\img\charpter\back.png" />
+    <None Include="Resource\img\charpter\boat.png" />
+    <None Include="Resource\img\charpter\chapter.png" />
+    <None Include="Resource\img\charpter\container.png" />
+    <None Include="Resource\img\charpter\digital_decryption.png" />
+    <None Include="Resource\img\charpter\graphic.png" />
+    <None Include="Resource\img\charpter\summary.png" />
+    <None Include="Resource\img\ending\background.png" />
+    <None Include="Resource\img\gamelayer\button_title.plist" />
+    <None Include="Resource\img\gamelayer\button_title.png" />
+    <None Include="Resource\img\gamelayer\mountain_stone.plist" />
+    <None Include="Resource\img\gamelayer\mountain_stone.png" />
+    <None Include="Resource\img\game\background.png" />
+    <None Include="Resource\img\game\backward.png" />
+    <None Include="Resource\img\game\backward_selected.png" />
+    <None Include="Resource\img\game\bg-none.png" />
+    <None Include="Resource\img\game\bg.png" />
+    <None Include="Resource\img\game\continue_normal.png" />
+    <None Include="Resource\img\game\continue_selected.png" />
+    <None Include="Resource\img\game\del.png" />
+    <None Include="Resource\img\game\del_selected.png" />
+    <None Include="Resource\img\game\failed.png" />
+    <None Include="Resource\img\game\forward.png" />
+    <None Include="Resource\img\game\forward_selected.png" />
+    <None Include="Resource\img\game\gameelements.plist" />
+    <None Include="Resource\img\game\gameelements.png" />
+    <None Include="Resource\img\game\grass.png" />
+    <None Include="Resource\img\game\lefttree.png" />
+    <None Include="Resource\img\game\m.png" />
+    <None Include="Resource\img\game\monkey.plist" />
+    <None Include="Resource\img\game\monkey.png" />
+    <None Include="Resource\img\game\monkeypush.plist" />
+    <None Include="Resource\img\game\monkeypush.png" />
+    <None Include="Resource\img\game\monkey\monkeypush.plist" />
+    <None Include="Resource\img\game\monkey\monkeypush.png" />
+    <None Include="Resource\img\game\monkey\push1.png" />
+    <None Include="Resource\img\game\monkey\push2.png" />
+    <None Include="Resource\img\game\monkey\push3.png" />
+    <None Include="Resource\img\game\mood.png" />
+    <None Include="Resource\img\game\next.png" />
+    <None Include="Resource\img\game\pauseboard.plist" />
+    <None Include="Resource\img\game\pauseboard.png" />
+    <None Include="Resource\img\game\progress.png" />
+    <None Include="Resource\img\game\reset.png" />
+    <None Include="Resource\img\game\reset_selected.png" />
+    <None Include="Resource\img\game\return.png" />
+    <None Include="Resource\img\game\return_selected.png" />
+    <None Include="Resource\img\game\righttree.png" />
+    <None Include="Resource\img\game\rule.png" />
+    <None Include="Resource\img\game\rule_selected.png" />
+    <None Include="Resource\img\game\stonetree.plist" />
+    <None Include="Resource\img\game\stonetree.png" />
+    <None Include="Resource\img\game\submit.png" />
+    <None Include="Resource\img\game\submit_selected.png" />
+    <None Include="Resource\img\game\successboard.plist" />
+    <None Include="Resource\img\game\successboard.png" />
+    <None Include="Resource\img\game\victory-stone.png" />
+    <None Include="Resource\img\game\victory.png" />
+    <None Include="Resource\img\game\woodboard.png" />
+    <None Include="Resource\img\level\0.png" />
+    <None Include="Resource\img\level\1.png" />
+    <None Include="Resource\img\level\10.png" />
+    <None Include="Resource\img\level\11.png" />
+    <None Include="Resource\img\level\12.png" />
+    <None Include="Resource\img\level\13.png" />
+    <None Include="Resource\img\level\14.png" />
+    <None Include="Resource\img\level\15.png" />
+    <None Include="Resource\img\level\2.png" />
+    <None Include="Resource\img\level\3.jpg" />
+    <None Include="Resource\img\level\3.png" />
+    <None Include="Resource\img\level\4.jpg" />
+    <None Include="Resource\img\level\4.png" />
+    <None Include="Resource\img\level\5.jpg" />
+    <None Include="Resource\img\level\5.png" />
+    <None Include="Resource\img\level\6.png" />
+    <None Include="Resource\img\level\7.png" />
+    <None Include="Resource\img\level\8.png" />
+    <None Include="Resource\img\level\9.png" />
+    <None Include="Resource\img\level\back.png" />
+    <None Include="Resource\img\level\background.png" />
+    <None Include="Resource\img\level\level-lock.png" />
+    <None Include="Resource\img\level\level.png" />
+    <None Include="Resource\img\level\lock.png" />
+    <None Include="Resource\img\loading\loading.png" />
+    <None Include="Resource\img\loading\workroom.png" />
+    <None Include="Resource\img\menu\background.png" />
+    <None Include="Resource\img\menu\match.png" />
+    <None Include="Resource\img\menu\menus.plist" />
+    <None Include="Resource\img\menu\menus.png" />
+    <None Include="Resource\img\menu\option.png" />
+    <None Include="Resource\img\menu\play.png" />
+    <None Include="Resource\img\menu\social.png" />
+    <None Include="Resource\LevelBackGround.png" />
+    <None Include="Resource\LevelsBackGround.png" />
+    <None Include="Resource\lua\charpter1\charpter.lua" />
+    <None Include="Resource\lua\charpter1\charpter_normal.png" />
+    <None Include="Resource\lua\charpter1\charpter_selected.png" />
+    <None Include="Resource\lua\charpter2\charpter_normal.png" />
+    <None Include="Resource\lua\charpter2\charpter_selected.png" />
+    <None Include="Resource\lua\charpter3\charpter_normal.png" />
+    <None Include="Resource\lua\charpter3\charpter_selected.png" />
+    <None Include="Resource\lua\charpter4\charpter.lua" />
+    <None Include="Resource\lua\charpter4\charpter_normal.png" />
+    <None Include="Resource\lua\charpter4\charpter_selected.png" />
+    <None Include="Resource\lua\charpter4\level1.lua" />
+    <None Include="Resource\lua\charpter4\level10.lua" />
+    <None Include="Resource\lua\charpter4\level11.lua" />
+    <None Include="Resource\lua\charpter4\level12.lua" />
+    <None Include="Resource\lua\charpter4\level13.lua" />
+    <None Include="Resource\lua\charpter4\level14.lua" />
+    <None Include="Resource\lua\charpter4\level15.lua" />
+    <None Include="Resource\lua\charpter4\level16.lua" />
+    <None Include="Resource\lua\charpter4\level17.lua" />
+    <None Include="Resource\lua\charpter4\level18.lua" />
+    <None Include="Resource\lua\charpter4\level19.lua" />
+    <None Include="Resource\lua\charpter4\level2.lua" />
+    <None Include="Resource\lua\charpter4\level20.lua" />
+    <None Include="Resource\lua\charpter4\level3.lua" />
+    <None Include="Resource\lua\charpter4\level4.lua" />
+    <None Include="Resource\lua\charpter4\level5.lua" />
+    <None Include="Resource\lua\charpter4\level6.lua" />
+    <None Include="Resource\lua\charpter4\level7.lua" />
+    <None Include="Resource\lua\charpter4\level8.lua" />
+    <None Include="Resource\lua\charpter4\level9.lua" />
+    <None Include="Resource\lua\charpter5\charpter_normal.png" />
+    <None Include="Resource\lua\charpter5\charpter_selected.png" />
+    <None Include="Resource\lua\charpter6\charpter_normal.png" />
+    <None Include="Resource\lua\charpter6\charpter_selected.png" />
+    <None Include="Resource\lua\game.lua" />
+    <None Include="Resource\lua\charpter1\level1.lua" />
+    <None Include="Resource\lua\charpter1\level10.lua" />
+    <None Include="Resource\lua\charpter1\level11.lua" />
+    <None Include="Resource\lua\charpter1\level12.lua" />
+    <None Include="Resource\lua\charpter1\level13.lua" />
+    <None Include="Resource\lua\charpter1\level14.lua" />
+    <None Include="Resource\lua\charpter1\level15.lua" />
+    <None Include="Resource\lua\charpter1\level16.lua" />
+    <None Include="Resource\lua\charpter1\level17.lua" />
+    <None Include="Resource\lua\charpter1\level18.lua" />
+    <None Include="Resource\lua\charpter1\level19.lua" />
+    <None Include="Resource\lua\charpter1\level2.lua" />
+    <None Include="Resource\lua\charpter1\level20.lua" />
+    <None Include="Resource\lua\level21.lua" />
+    <None Include="Resource\lua\level22.lua" />
+    <None Include="Resource\lua\level23.lua" />
+    <None Include="Resource\lua\level24.lua" />
+    <None Include="Resource\lua\level25.lua" />
+    <None Include="Resource\lua\charpter1\level4.lua" />
+    <None Include="Resource\lua\charpter1\level5.lua" />
+    <None Include="Resource\lua\charpter1\level6.lua" />
+    <None Include="Resource\lua\charpter1\level7.lua" />
+    <None Include="Resource\lua\charpter1\level8.lua" />
+    <None Include="Resource\lua\charpter1\level9.lua" />
+    <None Include="Resource\lua\charpter1\level3.lua" />
+    <None Include="Resource\lua\levle5.lua" />
+    <None Include="Resource\match.bmp" />
+    <None Include="Resource\match.png" />
+    <None Include="Resource\MatrixGameBackGround.png" />
+    <None Include="Resource\MenuBackGround.png" />
+    <None Include="Resource\music\mixdemo1.mp3" />
+    <None Include="Resource\ReturnNormal.png" />
+    <None Include="Resource\ReturnSelected.png" />
+    <None Include="Resource\slot.png" />
+    <None Include="Resource\StartNormal.png" />
+    <None Include="Resource\StartSelected.png" />
+    <None Include="Resource\test.txt" />
+    <None Include="Resource\texture\fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\lib\CFScoreBoard.h" />
+    <ClInclude Include="Classes\CFAbsLayer.h" />
+    <ClInclude Include="Classes\lib\CFConfiguration.h" />
+    <ClInclude Include="Classes\CFLevelLoader.h" />
+    <ClInclude Include="Classes\lib\CFLayer.h" />
+    <ClInclude Include="Classes\CFCharpterLayer.h" />
+    <ClInclude Include="Classes\lib\CFSprite.h" />
+    <ClInclude Include="Classes\CFSlot.h" />
+    <ClInclude Include="Classes\CFMatch.h" />
+    <ClInclude Include="Classes\CFLevelsLayer.h" />
+    <ClInclude Include="Classes\CFGameLayer.h" />
+    <ClInclude Include="Classes\CFMenuLayer.h" />
+    <ClInclude Include="Classes\CFLoadingLayer.h" />
+    <ClInclude Include="Classes\lib\CFLuaConfig.h" />
+    <ClInclude Include="Classes\lib\CFGameEngine.h" />
+    <ClInclude Include="Classes\AppDelegate.h" />
+    <ClInclude Include="Classes\lib\tinyxml\tinystr.h" />
+    <ClInclude Include="Classes\lib\tinyxml\tinyxml.h" />
+    <ClInclude Include="Classes\lua\lapi.h" />
+    <ClInclude Include="Classes\lua\lauxlib.h" />
+    <ClInclude Include="Classes\lua\lcode.h" />
+    <ClInclude Include="Classes\lua\ldebug.h" />
+    <ClInclude Include="Classes\lua\ldo.h" />
+    <ClInclude Include="Classes\lua\lfunc.h" />
+    <ClInclude Include="Classes\lua\lgc.h" />
+    <ClInclude Include="Classes\lua\llex.h" />
+    <ClInclude Include="Classes\lua\llimits.h" />
+    <ClInclude Include="Classes\lua\lmem.h" />
+    <ClInclude Include="Classes\lua\lobject.h" />
+    <ClInclude Include="Classes\lua\lopcodes.h" />
+    <ClInclude Include="Classes\lua\lparser.h" />
+    <ClInclude Include="Classes\lua\lstate.h" />
+    <ClInclude Include="Classes\lua\lstring.h" />
+    <ClInclude Include="Classes\lua\ltable.h" />
+    <ClInclude Include="Classes\lua\ltm.h" />
+    <ClInclude Include="Classes\lua\lua.h" />
+    <ClInclude Include="Classes\lua\luaconf.h" />
+    <ClInclude Include="Classes\lua\lualib.h" />
+    <ClInclude Include="Classes\lua\lundump.h" />
+    <ClInclude Include="Classes\lua\lvm.h" />
+    <ClInclude Include="Classes\lua\lzio.h" />
+    <ClInclude Include="Classes\CFMatchGame.h" />
+    <ClInclude Include="Classes\lib\odsocket.h" />
+    <ClInclude Include="win32\main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\lib\CFScoreBoard.cpp" />
+    <ClCompile Include="Classes\CFAbsLayer.cpp" />
+    <ClCompile Include="Classes\lib\CFConfiguration.cpp" />
+    <ClCompile Include="Classes\CFLevelLoader.cpp" />
+    <ClCompile Include="Classes\lib\CFLayer.cpp" />
+    <ClCompile Include="Classes\CFCharpterLayer.cpp" />
+    <ClCompile Include="Classes\lib\CFSprite.cpp" />
+    <ClCompile Include="Classes\CFSlot.cpp" />
+    <ClCompile Include="Classes\CFMatch.cpp" />
+    <ClCompile Include="Classes\CFLevelsLayer.cpp" />
+    <ClCompile Include="Classes\CFGameLayer.cpp" />
+    <ClCompile Include="Classes\CFMenuLayer.cpp" />
+    <ClCompile Include="Classes\CFLoadingLayer.cpp" />
+    <ClCompile Include="Classes\lib\CFLuaConfig.cpp" />
+    <ClCompile Include="Classes\lib\CFGameEngine.cpp" />
+    <ClCompile Include="Classes\AppDelegate.cpp" />
+    <ClCompile Include="Classes\lib\tinyxml\tinystr.cpp" />
+    <ClCompile Include="Classes\lib\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="Classes\lib\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="Classes\lib\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="Classes\lua\lapi.c" />
+    <ClCompile Include="Classes\lua\lauxlib.c" />
+    <ClCompile Include="Classes\lua\lbaselib.c" />
+    <ClCompile Include="Classes\lua\lcode.c" />
+    <ClCompile Include="Classes\lua\ldblib.c" />
+    <ClCompile Include="Classes\lua\ldebug.c" />
+    <ClCompile Include="Classes\lua\ldo.c" />
+    <ClCompile Include="Classes\lua\ldump.c" />
+    <ClCompile Include="Classes\lua\lfunc.c" />
+    <ClCompile Include="Classes\lua\lgc.c" />
+    <ClCompile Include="Classes\lua\linit.c" />
+    <ClCompile Include="Classes\lua\liolib.c" />
+    <ClCompile Include="Classes\lua\llex.c" />
+    <ClCompile Include="Classes\lua\lmathlib.c" />
+    <ClCompile Include="Classes\lua\lmem.c" />
+    <ClCompile Include="Classes\lua\loadlib.c" />
+    <ClCompile Include="Classes\lua\lobject.c" />
+    <ClCompile Include="Classes\lua\lopcodes.c" />
+    <ClCompile Include="Classes\lua\loslib.c" />
+    <ClCompile Include="Classes\lua\lparser.c" />
+    <ClCompile Include="Classes\lua\lstate.c" />
+    <ClCompile Include="Classes\lua\lstring.c" />
+    <ClCompile Include="Classes\lua\lstrlib.c" />
+    <ClCompile Include="Classes\lua\ltable.c" />
+    <ClCompile Include="Classes\lua\ltablib.c" />
+    <ClCompile Include="Classes\lua\ltm.c" />
+    <ClCompile Include="Classes\lua\lua.c" />
+    <ClCompile Include="Classes\lua\luac.c" />
+    <ClCompile Include="Classes\lua\lundump.c" />
+    <ClCompile Include="Classes\lua\lvm.c" />
+    <ClCompile Include="Classes\lua\lzio.c" />
+    <ClCompile Include="Classes\lua\print.c" />
+    <ClCompile Include="Classes\CFMatchGame.cpp" />
+    <ClCompile Include="Classes\lib\odsocket.cpp" />
+    <ClCompile Include="win32\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
