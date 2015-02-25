@@ -160,7 +160,7 @@ LOCAL_WHOLE_STATIC_LIBRARIES += cocos_freetype2_static
 #LOCAL_WHOLE_STATIC_LIBRARIES += chipmunk_static
 #LOCAL_WHOLE_STATIC_LIBRARIES += libwebsockets_static
 LOCAL_WHOLE_STATIC_LIBRARIES += wxsqlite3_static
-LOCAL_WHOLE_STATIC_LIBRARIES += android_support
+#LOCAL_WHOLE_STATIC_LIBRARIES += android_support
 
 
 LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
@@ -188,3 +188,4 @@ $(call import-module,cocos2dx/platform/third_party/android/prebuilt/libfreetype2
 #$(call import-module,external/chipmunk)
 #$(call import-module,external/libwebsockets/android)
 $(call import-module,external/wxsqlite3)
+#$(call import-module,android/support)
