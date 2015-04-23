@@ -30,6 +30,7 @@ CCBReader/CCBSequenceProperty.cpp \
 CCBReader/CCBValue.cpp \
 CCBReader/CCData.cpp \
 CCBReader/CCNode+CCBRelativePositioning.cpp \
+CCBReader/CCSpriteBatchNodeLoader.cpp \
 GUI/CCControlExtension/CCControl.cpp \
 GUI/CCControlExtension/CCControlButton.cpp \
 GUI/CCControlExtension/CCControlColourPicker.cpp \
@@ -49,11 +50,11 @@ GUI/CCScrollView/CCSorting.cpp \
 GUI/CCEditBox/CCEditBox.cpp \
 GUI/CCEditBox/CCEditBoxImplAndroid.cpp \
 network/HttpClient.cpp \
-network/WebSocket.cpp \
+LocalStorage/LocalStorageAndroid.cpp \
+#network/WebSocket.cpp \
 physics_nodes/CCPhysicsDebugNode.cpp \
 physics_nodes/CCPhysicsSprite.cpp \
-LocalStorage/LocalStorageAndroid.cpp \
-CocoStudio/Armature/CCArmature.cpp \
+#CocoStudio/Armature/CCArmature.cpp \
 CocoStudio/Armature/CCBone.cpp \
 CocoStudio/Armature/animation/CCArmatureAnimation.cpp \
 CocoStudio/Armature/animation/CCProcessBase.cpp \
@@ -111,7 +112,7 @@ CocoStudio/Reader/WidgetReader/ButtonReader/ButtonReader.cpp \
 CocoStudio/Reader/WidgetReader/CheckBoxReader/CheckBoxReader.cpp \
 CocoStudio/Reader/WidgetReader/ImageViewReader/ImageViewReader.cpp \
 CocoStudio/Reader/WidgetReader/LabelAtlasReader/LabelAtlasReader.cpp \
-CocoStudio/Reader/WidgetReader/LabelBMFontReader/LabelBMFontReader.cpp \
+#CocoStudio/Reader/WidgetReader/LabelBMFontReader/LabelBMFontReader.cpp \
 CocoStudio/Reader/WidgetReader/LabelReader/LabelReader.cpp \
 CocoStudio/Reader/WidgetReader/LayoutReader/LayoutReader.cpp \
 CocoStudio/Reader/WidgetReader/ListViewReader/ListViewReader.cpp \
@@ -156,9 +157,9 @@ spine/spine-cocos2dx.cpp \
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_curl_static
-LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
-LOCAL_WHOLE_STATIC_LIBRARIES += chipmunk_static
-LOCAL_WHOLE_STATIC_LIBRARIES += libwebsockets_static
+#LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
+#LOCAL_WHOLE_STATIC_LIBRARIES += chipmunk_static
+#LOCAL_WHOLE_STATIC_LIBRARIES += libwebsockets_static
 
 LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
 LOCAL_EXPORT_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
@@ -171,8 +172,8 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                            $(LOCAL_PATH)/GUI/CCScrollView \
                            $(LOCAL_PATH)/network \
                            $(LOCAL_PATH)/LocalStorage \
-                           $(LOCAL_PATH)/CocoStudio/Armature \
-                           $(LOCAL_PATH)/CocoStudio
+#                           $(LOCAL_PATH)/CocoStudio/Armature \
+#                           $(LOCAL_PATH)/CocoStudio
 
 LOCAL_CFLAGS := -fexceptions
                     
@@ -181,6 +182,6 @@ include $(BUILD_STATIC_LIBRARY)
 $(call import-module,cocos2dx)
 $(call import-module,CocosDenshion/android)
 $(call import-module,cocos2dx/platform/third_party/android/prebuilt/libcurl)
-$(call import-module,external/Box2D)
-$(call import-module,external/chipmunk)
-$(call import-module,external/libwebsockets/android)
+#$(call import-module,external/Box2D)
+#$(call import-module,external/chipmunk)
+#$(call import-module,external/libwebsockets/android)
