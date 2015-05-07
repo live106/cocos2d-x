@@ -178,7 +178,8 @@ public class Cocos2dxEditBoxDialog extends Dialog {
 		this.mInputEditText.setText(this.mMessage);
 
 		int oldImeOptions = this.mInputEditText.getImeOptions();
-		this.mInputEditText.setImeOptions(oldImeOptions | EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+//		this.mInputEditText.setImeOptions(oldImeOptions | EditorInfo.IME_FLAG_NO_EXTRACT_UI);
+		this.mInputEditText.setImeOptions(oldImeOptions | EditorInfo.IME_ACTION_GO);
 		oldImeOptions = this.mInputEditText.getImeOptions();
 
 		switch (this.mInputMode) {

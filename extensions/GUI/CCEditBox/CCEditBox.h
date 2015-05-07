@@ -162,6 +162,13 @@ public:
      */
     virtual void editBoxReturn(CCEditBox* editBox) = 0;
     
+    /**
+     * @author past106
+     * This method is called when the edit box's key board hide.
+     * @param editBox The edit box object that generated the event.
+     */
+    virtual void editBoxKeyboardDidHide(CCEditBox* editBox) {};
+    
 };
 
 /**

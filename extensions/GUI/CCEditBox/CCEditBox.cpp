@@ -386,7 +386,10 @@ void CCEditBox::keyboardWillHide(CCIMEKeyboardNotificationInfo& info)
 
 void CCEditBox::keyboardDidHide(CCIMEKeyboardNotificationInfo& info)
 {
-	
+	if (m_pDelegate)
+    {
+        m_pDelegate->editBoxKeyboardDidHide(this);
+    }
 }
 
 void CCEditBox::registerScriptEditBoxHandler(int handler)

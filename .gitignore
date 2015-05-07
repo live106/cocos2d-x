@@ -126,3 +126,5 @@ tags
 /v*-deps-*.zip
 /external/version.json
 projects/GameHelper
+projects/CatClient
+projects/AoB
