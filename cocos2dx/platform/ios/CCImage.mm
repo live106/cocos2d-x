@@ -396,6 +396,15 @@ static bool _initWithString(const char * pText, cocos2d::CCImage::ETextAlign eAl
 		// XXX: ios7 casting
         [str drawInRect:CGRectMake(textOriginX, textOrigingY, textWidth, textHeight) withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:(NSTextAlignment)align];
         
+        //New Code Start
+        if(pInfo->hasStroke)
+        {
+            CGContextSetTextDrawingMode(context, kCGTextStroke);       CGContextSetRGBFillColor(context, pInfo->strokeColorR, pInfo->strokeColorG, pInfo->strokeColorB, 1);
+            CGContextSetLineWidth(context, pInfo->strokeSize);
+            [str drawInRect:CGRectMake(textOriginX, textOrigingY, textWidth, textHeight) withFont:font lineBreakMode:NSLineBreakByWordWrapping alignment:(NSTextAlignment)align];
+        } 
+        //New Code End
+        
         // pop the context
         UIGraphicsPopContext();
         
