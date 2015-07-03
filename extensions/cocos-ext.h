@@ -40,7 +40,7 @@
 #include "network/HttpRequest.h"
 #include "network/HttpResponse.h"
 #include "network/HttpClient.h"
-/*
+
 #include "CocoStudio/Armature/CCArmature.h"
 #include "CocoStudio/Armature/CCBone.h"
 #include "CocoStudio/Armature/animation/CCArmatureAnimation.h"
@@ -82,15 +82,14 @@
 
 
 // Physics integration
-#if CC_ENABLE_CHIPMUNK_INTEGRATION || CC_ENABLE_BOX2D_INTEGRATION
-#include "physics_nodes/CCPhysicsDebugNode.h"
-#include "physics_nodes/CCPhysicsSprite.h"
-#endif
-*/
-/*
-#include "spine/spine-cocos2dx.h"
+//#if CC_ENABLE_CHIPMUNK_INTEGRATION || CC_ENABLE_BOX2D_INTEGRATION
+//#include "physics_nodes/CCPhysicsDebugNode.h"
+//#include "physics_nodes/CCPhysicsSprite.h"
+//#endif
+
+//#include "spine/spine-cocos2dx.h"
 
 #include "CocoStudio/CocoStudio.h"
-*/
+
 
 #endif /* __COCOS2D_EXT_H__ */
